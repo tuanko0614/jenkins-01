@@ -11,6 +11,15 @@ steps {
 git url: 'https://github.com/tuanko0614/jenkins-01.git', branch: 'main'
 }
 }
+
+stage('Start Docker') {
+steps{
+script {
+sh "service docker start"
+}
+}
+}
+
 stage('Building our image') {
 steps{
 script {
